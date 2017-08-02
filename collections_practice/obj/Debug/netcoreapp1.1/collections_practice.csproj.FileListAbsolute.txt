@@ -1,0 +1,8 @@
+c:\Users\kofis_000\Desktop\C-Sharp\collections_practice\bin\Debug\netcoreapp1.1\collections_practice.deps.json
+c:\Users\kofis_000\Desktop\C-Sharp\collections_practice\bin\Debug\netcoreapp1.1\collections_practice.runtimeconfig.json
+c:\Users\kofis_000\Desktop\C-Sharp\collections_practice\bin\Debug\netcoreapp1.1\collections_practice.runtimeconfig.dev.json
+c:\Users\kofis_000\Desktop\C-Sharp\collections_practice\obj\Debug\netcoreapp1.1\collections_practice.AssemblyInfo.cs
+c:\Users\kofis_000\Desktop\C-Sharp\collections_practice\bin\Debug\netcoreapp1.1\collections_practice.dll
+c:\Users\kofis_000\Desktop\C-Sharp\collections_practice\bin\Debug\netcoreapp1.1\collections_practice.pdb
+c:\Users\kofis_000\Desktop\C-Sharp\collections_practice\obj\Debug\netcoreapp1.1\collections_practice.dll
+c:\Users\kofis_000\Desktop\C-Sharp\collections_practice\obj\Debug\netcoreapp1.1\collections_practice.pdb
