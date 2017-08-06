@@ -1,0 +1,22 @@
+.nav {
+    border: 1px dotted black;
+    margin: 10px;
+    padding: 5px;
+    background-color:yellow;
+};
+
+.pic {
+    display: inline-block;
+}
+
+div.about_me {
+    display: inline-block;
+}
+
+div.box1 {
+    display: inline-block;
+}
+
+.user {
+    margin: 5px;
+}
