@@ -1,0 +1,8 @@
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Passcode_generator\bin\Debug\netcoreapp1.1\Passcode_generator.deps.json
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Passcode_generator\bin\Debug\netcoreapp1.1\Passcode_generator.runtimeconfig.json
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Passcode_generator\bin\Debug\netcoreapp1.1\Passcode_generator.runtimeconfig.dev.json
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Passcode_generator\bin\Debug\netcoreapp1.1\Passcode_generator.dll
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Passcode_generator\bin\Debug\netcoreapp1.1\Passcode_generator.pdb
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Passcode_generator\obj\Debug\netcoreapp1.1\Passcode_generator.AssemblyInfo.cs
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Passcode_generator\obj\Debug\netcoreapp1.1\Passcode_generator.dll
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Passcode_generator\obj\Debug\netcoreapp1.1\Passcode_generator.pdb

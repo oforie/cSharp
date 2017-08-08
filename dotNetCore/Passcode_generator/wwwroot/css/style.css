@@ -1,0 +1,19 @@
+.wrapper {
+    max-width: 950px;
+    margin: auto;
+    background-color: #FFF8DC;
+    text-align: center;
+}
+
+.generate {
+    /* border: 1px dotted black; */
+    padding: 5px;
+}
+
+.passcode{
+    border: 1px solid black;
+    width: 50%;
+    height: 30%;
+    margin-left: 25%;
+    margin-bottom: 5px;
+}
