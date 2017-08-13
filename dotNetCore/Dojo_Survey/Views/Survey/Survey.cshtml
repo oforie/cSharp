@@ -1,0 +1,41 @@
+
+    <html>
+    <head>
+        <title>Dojo Form</title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+        <meta charset="utf-8">
+      
+    </head>
+
+
+    <body>
+        <div class="wrapper">
+            <div class="form">
+                <h2>Please take our survey:</h2>
+                <form action="method" method='post'>
+        
+                    Your Name: <input type='text', name="nameField", value="">
+                    
+                    <p>Dojo Location: <select name="locationField">
+                    <option value="Los Angeles" name='LA'>Los Angeles</option>
+                    <option value="Dallas" name='Dallas'>Dallas</option>
+                    <option value="DC">Washington DC</option>
+                    <option value="Chicago" name='Chicago'>Chicago</option>
+                    </select></p>
+
+                    <p>Favorite Language: <select name="languageField">
+                    <option value="python">Python</option>
+                    <option value="c#">C#</option>
+                    <option value="java">Java</option>
+                    <option value="php">PHP</option>
+                    </select></p>
+
+                    <p> Comments (optional):</p> 
+                        <textarea name="commentsField"></textarea>
+
+                    <p><input type='submit', value="Submit"><p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

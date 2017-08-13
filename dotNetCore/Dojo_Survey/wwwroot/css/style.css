@@ -1,0 +1,12 @@
+.wrapper {
+    max-width: 900px;
+    margin: auto;
+    background-color: #FFF8DC;
+    padding: 15px;
+
+
+};
+
+.form {
+    border: 1px dotted black;
+}

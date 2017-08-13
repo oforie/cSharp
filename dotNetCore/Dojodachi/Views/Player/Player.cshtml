@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Index</title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+        <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="~/js/myscripts.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h3>DOJODACHI!</h3>
+            <div class="level_meter">
+                <a href="" class="levels" id="fullness"> Fullness: @ViewBag.Player.fullness   </a>
+                <a href="" class="levels" id="happiness"> Happiness: @ViewBag.Player.happiness </a>
+                <a href="" class="levels" id="meals">  Meals:@ViewBag.Player.meals  </a>
+                <a href="" class="levels" id="energy">  Energy:@ViewBag.Player.energy  </a>
+            </div>
+
+            <div class="container">
+
+                <div class="reaction">
+
+                    <p>@ViewBag.Player.status</p>
+                    <p>@ViewBag.Player.message</p>
+                    
+                  
+
+                </div>
+                
+            </div>
+        
+            <div class="actions">
+                <form action="/performAction" method="POST">
+                    <button type="submit" class="action" name="action" value="feed" id="feed">Feed</button>
+                </form>
+                <form action="/performAction" method="POST">
+                    <button type="submit" class="action" id="play" name="action" value="play">Play</button>
+                </form>
+                <form action="/performAction" method="POST">
+                    <button type="submit" class="action" id="work" name="action" value="work">Work</button>
+                </form>
+                <form action="/performAction" method="POST">
+                    <button type="submit" class="action" id="sleep" name="action" value="sleep">Sleep</button>
+                </form>
+                <a href="/restart" class="reset" id="reset">Exit Game</a>
+                
+
+                
+                @if (ViewBag.GameStatus == "win" || ViewBag.GameStatus == "lose")
+                { 
+                <a href="/restart" class="reset" id="reset">Restart Game</a>
+                }
+            </div>
+        </div>
+    </body>
+</html>

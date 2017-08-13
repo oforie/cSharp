@@ -1,0 +1,8 @@
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Dojodachi\bin\Debug\netcoreapp1.1\Dojodachi.deps.json
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Dojodachi\bin\Debug\netcoreapp1.1\Dojodachi.runtimeconfig.json
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Dojodachi\bin\Debug\netcoreapp1.1\Dojodachi.runtimeconfig.dev.json
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Dojodachi\bin\Debug\netcoreapp1.1\Dojodachi.dll
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Dojodachi\bin\Debug\netcoreapp1.1\Dojodachi.pdb
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Dojodachi\obj\Debug\netcoreapp1.1\Dojodachi.AssemblyInfo.cs
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Dojodachi\obj\Debug\netcoreapp1.1\Dojodachi.dll
+C:\Users\kofis_000\Desktop\C-Sharp\dotNetCore\Dojodachi\obj\Debug\netcoreapp1.1\Dojodachi.pdb
