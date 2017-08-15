@@ -1,0 +1,19 @@
+
+
+<h1>Login</h1>
+
+<div class='errors'>
+   @{
+        foreach(var error in ViewBag.LoginErrors)
+            {
+                <p id="errors">@error</p>
+            }
+    }
+</div>
+<form action="/login" method="post">
+    <label for="Email"></label>
+    <input type="text" name="email" value="">
+    <label for="Password"></label>
+    <input type="password" name="password" value="">
+    <input type="submit" value="Login">
+</form>

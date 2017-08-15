@@ -1,1 +1,7 @@
-/*Write all of your CSS here*/
+#errors {
+    color: red;
+}
+
+.errors {
+    color: red;
+}

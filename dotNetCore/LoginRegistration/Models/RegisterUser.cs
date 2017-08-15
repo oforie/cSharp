@@ -16,12 +16,14 @@ namespace LoginRegistration.Models
 
         [Required(ErrorMessage="Please enter a valid email")]
         [EmailAddress]
-        public string EmailAddress {get; set;}
+        public string Email {get; set;}
 
         [Required]
+        [MinLength(8)]
         [DataType(DataType.Password)]
         public string Password {get; set;}
 
+        [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage="Password and confirmation must match")]
         public string PasswordConfirmation {get; set;}  
     }

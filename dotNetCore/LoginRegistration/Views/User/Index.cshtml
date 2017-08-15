@@ -1,13 +1,14 @@
-@model LoginRegistration.Models.User
+@model LoginRegistration.Models.RegisterUser
 @{
     ViewData["Title"] = "Home Page";
 }
 
 
 
-<h1>Login Registration</h1>
+<h1>Register</h1>
 <div>  
- @{
+ @if(ViewBag.Errors != null)
+ {
         foreach(var error in ViewBag.Errors)
             {
                 if(@error.Errors.Count > 0)
@@ -15,7 +16,7 @@
                     <p>@error.Errors[0].ErrorMessage</p>
                 }
             }
-    }
+}
 <form asp.controller="User" asp-action="Register" method="post">
     <span asp-validation for="FirstName"></span>
     <label asp-for="FirstName"></label>
@@ -23,9 +24,9 @@
      <span asp-validation for="LastName"></span>
     <label asp-for="LastName"></label>
     <input asp-for="LastName">
-    <span asp-validation for="EmailAddress"></span>
-    <label asp-for="EmailAddress"></label>
-    <input asp-for="EmailAddress">
+    <span asp-validation for="Email"></span>
+    <label asp-for="Email"></label>
+    <input asp-for="Email">
      <span asp-validation for="Password"></span>
     <label asp-for="Password"></label>
     <input asp-for="Password">
@@ -36,4 +37,5 @@
     <input type="submit" value="Submit">
 
 </form>
-</div>
+<a href="/login">Already a member? Click to login</a>
+

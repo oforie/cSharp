@@ -2,8 +2,7 @@ using System.Collections.Generic;
 using System.Data;
 using Microsoft.Extensions.Options;
 using MySql.Data.MySqlClient;
-using LoginRegistration;
-
+ 
 namespace LoginRegistration
 {
     public class DbConnector
@@ -19,7 +18,9 @@ namespace LoginRegistration
                 return new MySqlConnection(MySqlConfig.Value.ConnectionString);
             }
         }
-        public static List<Dictionary<string, object>> Query(string queryString)
+        
+        //This method runs a query and stores the response in a list of dictionary records
+        public List<Dictionary<string, object>> Query(string queryString)
         {
             using(IDbConnection dbConnection = Connection)
             {
@@ -38,13 +39,13 @@ namespace LoginRegistration
                           }
                           result.Add(dict);
                       }
-                      return result;
-                                      }
+                   }
+                   return result;
                 }
             }
         }
         //This method run a query and returns no values
-        public static void Execute(string queryString)
+        public void Execute(string queryString)
         {
             using (IDbConnection dbConnection = Connection)
             {
