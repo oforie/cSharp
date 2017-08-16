@@ -1,0 +1,40 @@
+@model TheWall.Models.RegisterUser
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>  
+ 
+ @{
+        foreach(var error in ViewBag.Errors)
+            {
+                if(@error.Errors.Count > 0)
+                {
+                    <p>@error.Errors[0].ErrorMessage</p>
+                }
+            }
+}
+
+<form asp.controller="User" asp-action="Register" method="post">
+    <span asp-validation for="FirstName"></span>
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName">
+     <span asp-validation for="LastName"></span>
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName">
+    <span asp-validation for="Email"></span>
+    <label asp-for="Email"></label>
+    <input asp-for="Email">
+     <span asp-validation for="Password"></span>
+    <label asp-for="Password"></label>
+    <input asp-for="Password">
+     <span asp-validation for="PasswordConfirmation"></span>
+    <label asp-for="PasswordConfirmation"></label>
+   
+    <input asp-for="PasswordConfirmation">
+    <input type="submit" value="Submit">
+
+</form>
+
+<a href="/login">Already a member? Click to login</a>
