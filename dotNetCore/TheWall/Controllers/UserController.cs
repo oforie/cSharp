@@ -46,7 +46,7 @@ namespace TheWall.Controllers
                         if(ReturnedUser.Password == password)
                         {
                             HttpContext.Session.SetInt32("LoggedInUser", ReturnedUser.UserId);
-                            return RedirectToAction("Wall");
+                            return RedirectToAction("Wall", "Message");
                         }
                     }
             }
@@ -75,24 +75,16 @@ namespace TheWall.Controllers
                 };
                 _context.User.Add(newUser);
                 _context.SaveChanges();
-                return RedirectToAction("Wall");
+
+                var ReturnedUser = _context.User.SingleOrDefault(user => user.Email == newUser.Email);
+                System.Console.WriteLine($"Line 80*************************this is the newly registered user {ReturnedUser}");
+
+                HttpContext.Session.SetInt32("LoggedInUser", (int)ReturnedUser.UserId);
+                return RedirectToAction("Wall", "Message");
             }
             ViewBag.Errors = ModelState.Values;
             return View("Index");
         }
-
-        [HttpGet]
-        [Route("login/wall")]
-        public IActionResult Wall()
-        {
-            int? CurrentUser = HttpContext.Session.GetInt32("LoggedInUser");
-            if(CurrentUser == null)
-            {
-                return RedirectToAction("Login");
-            }
-            ViewBag.CurrentUser = CurrentUser;
-           return View("Wall");
-        } 
         
     }
 }

@@ -2,11 +2,9 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<a href="/logout">Logout</a>
-<h1>Welcome to the Wall!</h1>
+<a href="/">Logout</a>
+<h1>Welcome to the Dojo Wall!</h1>
 
-<p>CurrentUser Id</p>
-<p>@ViewBag.CurrentUser</p>
 
 <h3>Post to the wall</h3>
 <div>
@@ -24,3 +22,37 @@
 </form>
 
 <h3>See posts from your colleagues</h3>
+
+<div class="messages">
+@if(ViewBag.OrderedMessage != null)
+{
+    foreach( var message in ViewBag.OrderedMessage)
+    { 
+        <div id="one">
+            <p>@message.User.FirstName, on @message.CreatedAt.ToString("F")</p>
+            <p>"@message.Content"</p>
+            <h6>Comments:</h6>
+            @{
+            foreach( var comment in @message.Comments)
+            {
+                <p> - "@comment.Content", @comment.User.FirstName, on @comment.CreatedAt.ToString("F")</p>
+            }
+            }
+            <form action="/postcomment" method="post">
+                <h5>Post a Comment:</h5>
+                <textarea name="content" cols="60" rows="2" value=""></textarea><br>
+                <input type="hidden" name="MessageId" value="@message.MessageId">
+                <input type="submit" value="Post a comment"><hr>
+            </form>
+
+            <div>
+                @if(ViewBag.CommentErrors != null)
+                {
+                    <p>@ViewBag.CommentErrors[0]</p>
+                }
+</div>
+        </div>
+        
+    }
+}
+</div>

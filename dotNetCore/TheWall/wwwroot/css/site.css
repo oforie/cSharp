@@ -1,1 +1,9 @@
-/*Write all of your CSS here*/
+.messages{
+    border: 1px dotted black;
+
+}
+
+#one {
+    border: 1px solid black;
+    padding: 10px;
+}

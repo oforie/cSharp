@@ -4,7 +4,8 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div>  
+<div>
+    <h1> Welcome to the Dojo Wall</h1>  
  
  @{
         foreach(var error in ViewBag.Errors)
@@ -15,6 +16,8 @@
                 }
             }
 }
+
+<h3> Register </h3>
 
 <form asp.controller="User" asp-action="Register" method="post">
     <span asp-validation for="FirstName"></span>

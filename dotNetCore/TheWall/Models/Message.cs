@@ -19,10 +19,14 @@ namespace TheWall.Models
         public DateTime CreatedAt {get; set;}
         public DateTime UpdatedAt {get; set;}
 
+        public Message()
+        {
+             Comments = new List<Comment>();
+        }
         public Message(string message)
         {
             Content = message;
-           Comments = new List<Comment>();
+            Comments = new List<Comment>();
         }
     }
 }
