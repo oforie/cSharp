@@ -31,6 +31,15 @@
         <div id="one">
             <p>@message.User.FirstName, on @message.CreatedAt.ToString("F")</p>
             <p>"@message.Content"</p>
+            @if(message.User.UserId == ViewBag.CurrentUser)
+            {
+
+
+                <form action="/user/message/delete" method="post">
+                <input type="hidden" name="MessageId" value="@message.MessageId">
+                <input type="submit" value="Delete Message">
+                </form>
+            }
             <h6>Comments:</h6>
             @{
             foreach( var comment in @message.Comments)

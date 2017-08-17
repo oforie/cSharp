@@ -29,8 +29,9 @@ namespace TheWall.Controllers
             }
             ViewBag.CurrentUser = CurrentUser;
             var AllMessage = _context.Message.Include(message => message.Comments).ThenInclude(comment => comment.User).Include(message => message.User);
-            // List<Message> OrderedMessage = AllMessage.OrderByAscending((message) => message.CreatedAt).ToList();
-            ViewBag.OrderedMessage = AllMessage;
+            List<Message> OrderedMessage = AllMessage.OrderByDescending((message) => message.CreatedAt).ToList();
+            ViewBag.OrderedMessage = OrderedMessage;
+            ViewBag.CurrentUser = CurrentUser;
             System.Console.WriteLine($"***************line 32 this is the message query {AllMessage}");
             return View("Wall");
         }
@@ -63,6 +64,8 @@ namespace TheWall.Controllers
 
             Message newMessage = new Message(content);
             newMessage.UserId = (int)CurrentUser;
+            newMessage.CreatedAt = DateTime.Now;
+            newMessage.UpdatedAt = DateTime.Now;
             System.Console.WriteLine($"Line 39*****************this is the new message {newMessage}");
             _context.Message.Add(newMessage);
             _context.SaveChanges();
@@ -92,8 +95,21 @@ namespace TheWall.Controllers
                     Content = content,
                     MessageId = MessageId,
                     UserId =  (int)CurrentUser,
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now
             };
             _context.Comment.Add(NewComment);
+            _context.SaveChanges();
+            return RedirectToAction("Wall");
+        }
+
+        [HttpPost]
+        [Route("user/message/delete")]
+        public IActionResult RemoveMessage(int MessageId)
+        {
+            Message RetrievedMessage = _context.Message.SingleOrDefault(message => message.MessageId == MessageId);
+            System.Console.WriteLine($"Line 111************************this it the message being removed {RetrievedMessage.MessageId}");
+            _context.Message.Remove(RetrievedMessage);
             _context.SaveChanges();
             return RedirectToAction("Wall");
         }
